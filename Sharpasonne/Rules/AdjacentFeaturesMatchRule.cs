@@ -12,8 +12,7 @@ namespace Sharpasonne.Rules
     /// </summary>
     public class AdjacentFeaturesMatchRule : IRule<PlaceTileGameAction>
     {
-        public bool Verify<T1>(IEngine engine, T1 action)
-            where T1 : PlaceTileGameAction
+        public bool Verify(IEngine engine, PlaceTileGameAction action)
         {
             var adjacent = engine.Board.GetAdjecentTiles(action.Point);
             var allMatch = adjacent

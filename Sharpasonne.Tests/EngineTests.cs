@@ -14,7 +14,7 @@ namespace Sharpasonne.Tests
     {
         class DummyRule : IRule<IGameAction>
         {
-            public bool Verify<T1>(IEngine engine, T1 gameAction) where T1 : IGameAction
+            public bool Verify(IEngine engine, IGameAction gameAction)
             {
                 throw new NotImplementedException();
             }

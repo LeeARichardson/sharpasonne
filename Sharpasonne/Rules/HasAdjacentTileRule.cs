@@ -9,7 +9,7 @@ namespace Sharpasonne.Rules
     /// </summary>
     public class HasAdjacentTileRule : IRule<PlaceTileGameAction>
     {
-        public bool Verify<T1>(IEngine engine, T1 gameAction) where T1 : PlaceTileGameAction
+        public bool Verify(IEngine engine, PlaceTileGameAction gameAction)
         {
             var isValid = !engine.Board.ToImmutableDictionary().Any()
                 || engine.Board.GetAdjecentTiles(gameAction.Point)

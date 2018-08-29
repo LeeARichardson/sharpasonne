@@ -7,8 +7,7 @@ namespace Sharpasonne.Rules
     /// </summary>
     public class SpaceIsEmptyRule : IRule<PlaceTileGameAction>
     {
-        public bool Verify<T>(IEngine engine, T gameAction)
-            where T : PlaceTileGameAction
+        public bool Verify(IEngine engine, PlaceTileGameAction gameAction)
         {
             var optionalTile = engine.Board.Get(gameAction.Point);
 
